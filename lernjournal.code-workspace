@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"name": "Project",
+			"path": "."
+		},
+		{
+			"name": "Source",
+			"path": "./src"
+		},
+		{
+			"name": "Deploy",
+			"path": "./dist"
+		}
+
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"node_modules/": true,
+			"**/.DS_Store": true
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"TabNine.tabnine-vscode",
+			"jcbuisson.vue",
+			"octref.vetur",
+			"dbaeumer.vscode-eslint",
+			"peakchen90.vue-beautify"
+		]
+	}
+}
