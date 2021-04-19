@@ -1,13 +1,24 @@
 {
-    "name": "lj-w-nodejs",
-    "version": "0.0.1",
-    "description": "A project with node, vue, electron",
-    "main": "src/main.js",
-    "private": true,
-    "scripts": {
-      
-    },
-    "devDependencies": {
-      
-    }
+  "name": "lj-w-nodejs",
+  "version": "0.0.1",
+  "author": "René Ottenburg",
+  "description": "A project with node, vue, electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReddixT/lj-w-nodejs.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReddixT/lj-w-nodejs/issues"
+  },
+  "homepage": "https://github.com/ReddixT/lj-w-nodejs#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "electron": "^12.0.4"
+  }
 }
