@@ -392,6 +392,11 @@ export default {
   beforeDestroy() {
     this.editor.destroy();
   },
+  methods: {
+    onUpdate: ({ getHTML }) => {
+      this.html = getHTML();
+    },
+  },
 };
 </script>
 <style scoped>

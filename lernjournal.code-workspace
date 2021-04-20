@@ -9,8 +9,12 @@
 			"path": "./src"
 		},
 		{
-			"name": "Deploy",
+			"name": "Deploy-electron",
 			"path": "./dist_electron"
+		},
+		{
+			"name": "Deploy-vue",
+			"path": "./dist"
 		}
 	],
 	"settings": {
