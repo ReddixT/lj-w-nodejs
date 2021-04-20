@@ -10,9 +10,8 @@
 		},
 		{
 			"name": "Deploy",
-			"path": "./dist"
+			"path": "./dist_electron"
 		}
-
 	],
 	"settings": {
 		"files.exclude": {
@@ -21,7 +20,8 @@
 			"**/.hg": true,
 			"**/CVS": true,
 			"node_modules/": true,
-			"**/.DS_Store": true
+			"**/.DS_Store": true,
+			"dev/": true
 		}
 	},
 	"extensions": {
