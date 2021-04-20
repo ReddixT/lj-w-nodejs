@@ -1,8 +1,13 @@
 import { createApp } from "vue";
-import App from "./App.vue";
-import VueMarkdownIt from "vue3-markdown-it";
+import App from "./App";
+import mavonEditor from "mavon-editor";
+import "mavon-editor/dist/css/index.css";
 
-// const app = createApp(App).mount("#app");
-const app = createApp();
-app.use(VueMarkdownIt);
-app.config.productionTip = false;
+createApp({
+  el: "#main",
+  components: { App, mavonEditor },
+  template: "<App/>",
+  data() {
+    return { value: "" };
+  },
+});
