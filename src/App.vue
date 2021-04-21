@@ -30,6 +30,8 @@ td,
 th {
   border: 1px solid black;
   border-collapse: collapse;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 tr,
 th,
@@ -43,5 +45,9 @@ td p {
 table {
   width: 90%;
   margin: auto;
+  table-layout: fixed;
+}
+.ProseMirror {
+  top: -20px;
 }
 </style>

@@ -2,32 +2,118 @@
   <div>
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
       <div class="menu__buttons">
+        <button @click="commands.undo">
+          <img src="../assets/icons/undo.svg" width="10px" height="10px" />
+        </button>
+
+        <button class="menubar__button" @click="commands.redo">
+          <img src="../assets/icons/redo.svg" width="10px" height="10px" />
+        </button>
+
         <button
+          class="menubar__button"
           :class="{ 'is-active': isActive.bold() }"
           @click="commands.bold"
-          id="button__bold"
         >
-          B
+          <img src="../assets/icons/bold.svg" width="10px" height="10px" />
         </button>
+
         <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.italic() }"
+          @click="commands.italic"
+        >
+          <img src="../assets/icons/italic.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.strike() }"
+          @click="commands.strike"
+        >
+          <img src="../assets/icons/strike.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
           :class="{ 'is-active': isActive.underline() }"
           @click="commands.underline"
-          id="button__underline"
         >
-          U
+          <img src="../assets/icons/underline.svg" width="10px" height="10px" />
         </button>
+
         <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.code() }"
+          @click="commands.code"
+        >
+          <img src="../assets/icons/code.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.paragraph() }"
+          @click="commands.paragraph"
+        >
+          <img src="../assets/icons/paragraph.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
           :class="{ 'is-active': isActive.heading({ level: 1 }) }"
           @click="commands.heading({ level: 1 })"
         >
           H1
         </button>
+
         <button
+          class="menubar__button"
           :class="{ 'is-active': isActive.heading({ level: 2 }) }"
           @click="commands.heading({ level: 2 })"
         >
           H2
         </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.heading({ level: 3 }) }"
+          @click="commands.heading({ level: 3 })"
+        >
+          H3
+        </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.bullet_list() }"
+          @click="commands.bullet_list"
+        >
+          <img src="../assets/icons/ul.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.ordered_list() }"
+          @click="commands.ordered_list"
+        >
+          <img src="../assets/icons/ol.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.blockquote() }"
+          @click="commands.blockquote"
+        >
+          <img src="../assets/icons/quote.svg" width="10px" height="10px" />
+        </button>
+
+        <button
+          class="menubar__button"
+          :class="{ 'is-active': isActive.code_block() }"
+          @click="commands.code_block"
+        >
+          <img src="../assets/icons/code.svg" width="10px" height="10px" />
+        </button>
+
         <button
           class="menubar__button"
           @click="
@@ -38,33 +124,65 @@
             })
           "
         >
-          Table
+          <img src="../assets/icons/table.svg" width="10px" height="10px" />
         </button>
 
         <span v-if="isActive.table()">
           <button class="menubar__button" @click="commands.deleteTable">
-            delete_table
+            <img
+              src="../assets/icons/delete_table.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.addColumnBefore">
-            add_col_before
+            <img
+              src="../assets/icons/add_col_before.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.addColumnAfter">
-            add_col_after
+            <img
+              src="../assets/icons/add_col_after.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.deleteColumn">
-            delete_col
+            <img
+              src="../assets/icons/delete_col.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.addRowBefore">
-            add_row_before
+            <img
+              src="../assets/icons/add_row_before.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.addRowAfter">
-            add_row_after
+            <img
+              src="../assets/icons/add_row_after.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.deleteRow">
-            delete_row
+            <img
+              src="../assets/icons/delete_row.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
           <button class="menubar__button" @click="commands.toggleCellMerge">
-            combine_cells
+            <img
+              src="../assets/icons/combine_cells.svg"
+              width="10px"
+              height="10px"
+            />
           </button>
         </span>
       </div>
