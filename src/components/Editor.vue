@@ -188,6 +188,7 @@
       </div>
     </editor-menu-bar>
     <editor-content class="editor__content" :editor="editor" />
+    <button type="button" @click="SaveContent">Save Content</button>
   </div>
 </template>
 
@@ -514,6 +515,7 @@ export default {
     onUpdate: ({ getHTML }) => {
       this.html = getHTML();
     },
+    SaveContent() {},
   },
 };
 </script>

@@ -12,6 +12,9 @@ export default {
   components: {
     Editor,
   },
+  metaInfo: {
+    title: "ls-w-nodejs",
+  },
 };
 </script>
 
